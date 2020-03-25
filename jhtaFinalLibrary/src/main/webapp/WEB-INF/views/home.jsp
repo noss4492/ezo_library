@@ -10,7 +10,7 @@
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
-<p> 깃헙 왜잃엄.. </p>
+<p> 깃헙님 대체 왜 인코딩이...? </p>
 <p> 한글한그란글깬ㅇㄹㄹㄴ알낭ㄹㄴㄹ</p>
 </body>
 </html>

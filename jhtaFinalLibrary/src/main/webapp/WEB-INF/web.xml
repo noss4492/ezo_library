@@ -3,6 +3,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
+	<!-- 공통 -->
+	<!-- needed for ContextLoaderListener -->
 	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
@@ -15,6 +17,8 @@
 	</listener>
 
 	<!-- Processes application requests -->
+	<!-- The Front controller of this Spring web application, 
+		responsible for handling all application requests -->
 	<servlet>
 		<servlet-name>appServlet</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -25,9 +29,40 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 		
+	<!-- Map all Requests to the DispatcherServlet for handling -->
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	
+	<!-- encoding filter utf-8 -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- 시작시에 테스트점 -->
+	<welcome-file-list>
+		<welcome-file>home.html</welcome-file>
+		<welcome-file>home.htm</welcome-file>
+		<welcome-file>home.jsp</welcome-file>
+	</welcome-file-list>
+	
+	
+	
+	
+	
 
 </web-app>
