@@ -1,0 +1,290 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h3 {
+	font-size: 25px;
+	color: olive;
+}
+
+body {
+	font-family: 'Noto Sans', '나눔고딕', 'NanumGothic', 'Helvetica',
+		'sans-serif';
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+#headerWrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#header {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#headerTopWrapper {
+	margin: 0 auto;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#headerTop {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+#siteMenu {
+	text-align: right;
+}
+
+#siteMenu li {
+	/* font-style: normal; */
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#libraryShortcut {
+	text-align: left;
+	float: left;
+	/* width: 500px; */
+}
+
+.dropdownbtn {
+	width: 160px;
+	height: 45px;
+}
+
+.dropdownbtn a::after {
+	content: "\25BC";
+}
+
+#dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 9999999;
+}
+
+#dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+#dropdown-content a:hover {
+	background-color: darkgoldenrod;
+}
+
+#libraryShortcut:hover .dropdownbtn {
+	background-color: #3e8e41;
+}
+
+.dropdown:hover #dropdown-content {
+	display: block;
+}
+
+#siteMenu li::before {
+	content: "|";
+	padding-right: 10px;
+}
+
+#siteMenu li {
+	display: inline;
+	list-style: none;
+	margin-right: 10px;
+}
+
+#siteMenu li:first-child::before {
+	content: none;
+}
+
+#headerMid {
+	margin: 0 auto;
+	height: 120px;
+	width: 1000px;
+}
+
+#logo {
+	padding-top: 32px;
+	float: left;
+}
+
+#topSearchBarDiv {
+	margin-top: 20px;
+	display: inline-block;
+	width: 35em;
+	border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+#topSearchBarInput {
+	width: 480px;
+	height: 53px;
+	border-style: none;
+	float: left;
+	font-size: 17px;
+	padding-left: 10px;
+	outline: none;
+}
+
+/* #topSearchBtn {
+            padding-left: 10px;
+        } */
+#searchBtn {
+	padding-left: 25px;
+	padding-top: 10px;
+}
+
+#topSearchBarBtn {
+	border: 0;
+	outline: 0;
+	background-color: white;
+	padding-left: 5px;
+	padding-top: 10px;
+}
+
+#navBarWrapper {
+	width: 100%;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	height: 40px;
+	/* overflow: hidden; */
+}
+
+#navBar1 {
+	height: 40px;
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	/* overflow: hidden; */
+}
+
+/* 이게 각각의 li요소의 크기임. 첫번째 메인 메뉴의 높이도 이거에 상관 받음. */
+#navBar1 #navBarMain li {
+	width: 240px;
+	height: 40px;
+	list-style: none;
+	float: left;
+}
+
+#navBarMain {
+	height: 40px;
+	background-color: white;
+	overflow: hidden;
+	transition: height .5s;
+}
+
+#navBarMain:hover {
+	height: 300px;
+	background-color: rgb(250, 250, 250)
+}
+
+/* 이게 첫번째 메인 메뉴의 높이임. 도서관소개,자료검색,신청서비스,도서관소식,나만의도서관 */
+/* 이게 마우스 호버 영역을 만듬. 이 영역이 너무 크거나 작으면 호버가 제대로 안될 수 있음. */
+#navBar1 #navBarMain>li {
+	/* height:70px; */
+	font-size: 25px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+/* 이걸로 메인메뉴와 서브메뉴 사이의 첫번째 간격을 조정할 수 있음. */
+#navBar1 .navBarSub {
+	/* position: absolute; */
+	/* top: 50px; */
+	/* padding-top: 20px; */
+	left: 0px;
+	width: 100%;
+}
+
+#navBar1 ul {
+	list-style: none;
+	position: relative;
+	margin: 0 auto;
+}
+
+#navBar1 #navBarMain>li {
+	float: left;
+}
+
+#navBar1 #navBarMain:hover .navBarSub {
+	display: block;
+}
+
+#navBar1 #navBarMain:hover .navBar2 {
+	display: block;
+	z-index: 99999;
+	/* height: 300px; */
+	/* transition: height 2s; */
+	/* width: 1200px; */
+}
+
+.navBarSub li {
+	font-size: 16px;
+	font-weight: lighter;
+}
+
+.navBarSub {
+	font-size: 16px;
+	font-weight: lighter;
+	top: 7px;
+	border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.navBar2 {
+	width: 100%;
+	/* margin-top: 18px; */
+	background-color: red;
+	height: 0px;
+	border: 2px solid black;
+	display: none;
+	margin-top: 8px;
+	/* z-index: 99999; */
+}
+
+/* ================================================================================== */
+/* =====================navBar 고치는중==================== */
+.jbFixed {
+	position: fixed;
+	top: 0px;
+	/* background-color: olive; */
+	height: 40px;
+	/* padding-bottom: 10px; */
+	margin-top: 0px;
+	border-bottom: 1px solid gray;
+}
+
+.jbOffset2 {
+	position: fixed;
+	top: 0px;
+	background-color: olive;
+	height: 40px;
+	/* padding-bottom: 10px; */
+	margin-top: 0px;
+	border-bottom: 1px solid gray;
+}
+
+.navBarLi:hover {
+	background-color: olive;
+	border-bottom: 2px solid black;
+}
+
+.navBarLiSub:hover {
+	font-weight: 900;
+}

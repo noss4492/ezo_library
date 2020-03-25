@@ -36,4 +36,14 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping(value ="/header" , method = RequestMethod.GET)
+	public String header() {
+		return "header";
+	}
+	@RequestMapping(value ="/main" , method = RequestMethod.GET)
+	public String main() {
+		return "main";
+	}
+	
+	
 }
