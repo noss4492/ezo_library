@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+#header {
+	width: 100%;
+	height: 206px;
+	background-color: goldenrod;
+}
+
+#wholeWrapper1 {
+	width: 100%;
+}
+
+#wholeWrapper2 {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+#sideNav {
+	float: left;
+	width: 270px;
+	height: 400px;
+	background-color: red;
+	border: 2px solid black;
+}
+
+#applyFormWrapper {
+	width: 880px;
+	height: 1177px;
+	float: right;
+}
+
+#applyformTitleandNav {
+	width: 100%;
+	height: 161px;
+}
+
+#applyformTitleandNav h3 {
+	height: 50px;
+	margin-top: 30px;
+	padding-top: 20px;
+	font-size: 1.875em;
+	font-family: 'Nanum Gothic';
+	font-weight: lighter;
+}
+
+#applyformNavBar {
+	height: 51px;
+	border-top: 1px solid rgb(226, 214, 214, 0.904);
+	border-bottom: 1px solid rgba(226, 214, 214, 0.904);
+}
+
+#applyformNavBar span {
+	display: inline-block;
+	line-height: 50px;
+}
+
+#applyformNavBar>a>i:nth-child(1) {
+	position: relative;
+	top: 5px;
+}
+
+#applyformCore {
+	width: 100%;
+	height: 916px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#tabNav {
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
+
+#tabNavContents {
+	list-style: none;
+}
+
+#tabNavContents li {
+	float: left;
+	width: 33.1%;
+	border: 1px solid rgb(226, 214, 214, 0.904);
+	height: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: block;
+}
+
+#tabNavContents {
+	vertical-align: middle;
+}
+
+#rentPolicy {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#rendPolicyDetail li {
+	list-style: inside;
+	padding-top: 5px;
+	font-size: 17px;
+	font-weight: bold;
+	color: rgb(141, 136, 136);
+}
+
+#rentInfo {
+	height: 25px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+#rentInfoTableWrapper {
+	width: 100%;
+}
+
+#rentInfoTable>tr, th, td {
+	border: 1px solid black;
+	text-align: center;
+	vertical-align: middle;
+	padding: 10px 5px 10px 5px;
+}
+
+#rentInfoTable th, td:nth-child(1), td:last-child {
+	border-left: white;
+	border-right: white;
+}
+
+#rentInfoTable {
+	border-collapse: collapse;
+	border-top: 2px solid black;
+}
+
+#rentInfoTable th {
+	background-color: rgba(248, 242, 242, 0.931);
+}
+
+#rentInfoTableth1 {
+	width: 10%
+}
+
+#rentInfoTableth2 {
+	width: 30%;
+}
+
+#rentInfoTableth3 {
+	width: 30%;
+}
+
+#rentInfoTableth4 {
+	width: 30%;
+}
+
+#howToUse {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+#howToUseList {
+	list-style-position: inside;
+	color: rgb(141, 136, 136);
+}
+
+#rentLink {
+	margin-top: 20px;
+	padding: 10px 10px 10px 10px;
+	background-color: rgb(221, 227, 233);
+	height: 43px;
+}
+
+#rentLink dt {
+	float: left;
+	font-size: 20px;
+	padding: 5px 5px 5px 5px;
+}
+
+#rentLink dd {
+	float: right;
+	display: block;
+}
+
+#rentLink a {
+	text-decoration: none;
+}
+
+#rentLink dd button {
+	width: 123px;
+	height: 38px;
+	font-weight: bolder;
+	font-size: 14px;
+	padding: 5px 15px 5px 15px;
+}
+
+#rentLinkBtn1, #rentLinkBtn2 {
+	color: white;
+}
+
+#rentLinkBtn1 {
+	background-color: RGB(100, 104, 109);
+}
+
+#rentLinkBtn2 {
+	background-color: rgb(92, 119, 30);
+}

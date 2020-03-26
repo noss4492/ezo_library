@@ -317,16 +317,17 @@
                                 <th align="center">금</th>
                                 <th align="center">토</th>
                             </tr>
-                        </table>
-                        <p class="cal_info">
-                            <i class="redcircle"></i>
-                            휴관일
-                            <i class="bluesquare"></i>
-                            행사일
-                            <i class="greensquare"></i>
-                            문화행사프로그램
-
-                        </p>
+	                        </table>
+	                        <p class="cal_info">
+	                            <i class="redcircle"></i>
+	                            휴관일
+	                            <i class="bluesquare"></i>
+	                            행사일
+	                            <i class="greensquare"></i>
+	                            문화행사프로그램
+	
+	                        </p>
+                    </div>    
                     </div>
                     <div class="mainevent">
                         <div class="eventtop">

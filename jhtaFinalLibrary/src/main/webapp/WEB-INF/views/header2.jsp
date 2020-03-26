@@ -7,32 +7,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"> -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 	<link rel="stylesheet" href="<c:url value="resources/css/header.css"/>" />
-	<script>
-	  $(function () {
-          var jbOffset = $("#navBarWrapper").offset();
-          var jbOffset2 = $("#navBarMain").offset();
-          console.log(jbOffset);
-          $(window).scroll(function () {
 
-              if ($(document).scrollTop() > jbOffset.top) {
-                  $("#navBarWrapper").addClass("jbFixed");
-                  $("#navBarMain").addClass("jbOffset2");
-
-                  // $("#contents").addClass("bodyDown");
-              } else {
-                  $("#navBarWrapper").removeClass("jbFixed");
-                  $("#navBarMain").addClass("jbOffset2");
-              }
-          });
-
-      });
-	</script>
 
 </head>
 <body>

@@ -7,7 +7,7 @@
 
 h3 {
 	font-size: 25px;
-	color: olive;
+	color: #46B7D9;
 }
 
 body {
@@ -28,6 +28,7 @@ a:hover {
 #headerWrapper {
 	width: 100%;
 	margin: 0 auto;
+/* 	z-index: absolute; */
 }
 
 #header {
@@ -119,23 +120,26 @@ a:hover {
 #headerMid {
 	margin: 0 auto;
 	height: 120px;
-	width: 1000px;
+	width: 1200px;
+	text-align: center;
+	padding-right: 100px
 }
 
 #logo {
 	padding-top: 32px;
 	float: left;
+	padding-left: 100px
 }
 
 #topSearchBarDiv {
-	margin-top: 20px;
+	margin-top: 25px;
 	display: inline-block;
 	width: 35em;
 	border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 #topSearchBarInput {
-	width: 480px;
+	width: 430px;
 	height: 53px;
 	border-style: none;
 	float: left;
@@ -148,7 +152,7 @@ a:hover {
             padding-left: 10px;
         } */
 #searchBtn {
-	padding-left: 25px;
+	padding-left: 10px;
 	padding-top: 10px;
 }
 
@@ -163,7 +167,7 @@ a:hover {
 #navBarWrapper {
 	width: 100%;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-	height: 40px;
+	height: 41px;
 	/* overflow: hidden; */
 }
 
@@ -227,7 +231,7 @@ a:hover {
 	display: block;
 }
 
-#navBar1 #navBarMain:hover .navBar2 {
+#navBar1 #navBarMain:hover .navBar2, li{
 	display: block;
 	z-index: 99999;
 	/* height: 300px; */
@@ -241,10 +245,14 @@ a:hover {
 }
 
 .navBarSub {
-	font-size: 16px;
-	font-weight: lighter;
-	top: 7px;
-	border-top: 1px solid rgba(0, 0, 0, 0.3);
+/* 	font-size: 16px; */
+/* 	font-weight: lighter; */
+/* 	top: 7px; */
+/* 	border-top: 1px solid rgba(0, 0, 0, 0.3); */
+ font-size: 16px;
+            font-weight: lighter;
+            top: 5px;
+            border-top: 1px solid  rgba(0, 0, 0, 0.3);
 }
 
 .navBar2 {
@@ -268,20 +276,21 @@ a:hover {
 	/* padding-bottom: 10px; */
 	margin-top: 0px;
 	border-bottom: 1px solid gray;
+	
 }
 
 .jbOffset2 {
 	position: fixed;
 	top: 0px;
-	background-color: olive;
+	background-color: #46B7D9;
 	height: 40px;
 	/* padding-bottom: 10px; */
 	margin-top: 0px;
-	border-bottom: 1px solid gray;
+/* 	border-bottom: 1px solid gray; */
 }
 
 .navBarLi:hover {
-	background-color: olive;
+	background-color: #46B7D9;
 	border-bottom: 2px solid black;
 }
 

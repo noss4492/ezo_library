@@ -40,9 +40,17 @@ public class HomeController {
 	public String header() {
 		return "header";
 	}
+	@RequestMapping(value ="/header2" , method = RequestMethod.GET)
+	public String header2() {
+		return "header2";
+	}
 	@RequestMapping(value ="/main" , method = RequestMethod.GET)
 	public String main() {
 		return "main";
+	}
+	@RequestMapping(value ="/facilityRentForm1" , method = RequestMethod.GET)
+	public String facilityRentForm1() {
+		return "facilityRentForm1";
 	}
 	
 	

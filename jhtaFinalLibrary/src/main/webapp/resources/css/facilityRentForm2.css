@@ -1,0 +1,192 @@
+@charset "UTF-8";
+ * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        body {
+            font-family: 'Noto Sans', '나눔고딕', 'NanumGothic', 'Helvetica', 'sans-serif';
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #header {
+            width: 100%;
+            height: 206px;
+            background-color: goldenrod;
+        }
+
+        #wholeWrapper1 {
+            width: 100%;
+
+        }
+
+        #wholeWrapper2 {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #sideNav {
+            float: left;
+            width: 270px;
+            height: 400px;
+            background-color: red;
+            border: 2px solid black;
+        }
+
+        #generalWrapper {
+            width: 880px;
+            height: 1177px;
+            float: right;
+        }
+
+        #generalTitleandNav {
+            width: 100%;
+            height: 161px;
+        }
+
+        #generalTitleandNav h3 {
+            height: 50px;
+            margin-top: 30px;
+            padding-top: 20px;
+            font-size: 1.875em;
+            font-family: 'Nanum Gothic';
+            font-weight: lighter;
+
+        }
+
+        #generalNavBar {
+            height: 51px;
+            border-top: 1px solid rgb(226, 214, 214, 0.904);
+            border-bottom: 1px solid rgba(226, 214, 214, 0.904);
+        }
+
+        #generalNavBar span {
+            display: inline-block;
+            line-height: 50px;
+        }
+
+        #generalNavBar>a>i:nth-child(1) {
+            position: relative;
+            top: 5px;
+        }
+
+        #generalCore {
+            width: 100%;
+            height: 916px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        #tabNav {
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        #tabNavContents {
+            list-style: none;
+
+
+        }
+
+        #tabNavContents li {
+            float: left;
+            width: 33.1%;
+            border: 1px solid rgb(226, 214, 214, 0.904);
+            height: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: block;
+        }
+
+        #tabNavContents li:nth-child(2) {
+            color: white;
+            background-color: olive;
+        }
+
+        #tabNavContents {
+            vertical-align: middle;
+        }
+        #placeSearchDiv{
+            display: inline-block;
+            width: 880px;
+            height: 36px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 35px;
+            background-color: #f2f2f2;
+        }
+        #placeSearchInput{
+            margin: 0 auto;
+            height: 36px;
+            width: 720px;
+            text-align: center;
+        }
+        #searchSelect{
+            float: left;
+            width: 156px;
+            height: 100%;
+            padding-left: 10px;
+            padding-right: 26px;
+        }
+        #searchText{
+            width: 480px;
+            height: 100%;
+            border: 1px solid rgb(226, 214, 214, 0.904);
+        }
+        #searchSubmit{
+            width: 75px;
+            height: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: #555;
+            color: white;
+        
+        }
+        #placeInfoDetailWrapper1{
+            border: 1px solid rgb(200, 198, 198);
+            width: 840px;
+            height: 185px;
+            padding: 20px 20px 20px 20px;
+            
+        }
+        #placeThumnailDiv{
+            display: inline-block;
+            width: 210px;
+            height: 160px;
+        }
+        #placeThumnailDiv img{
+            width: 210px;
+            height: 160px;
+            float: left ;
+        }
+        #placeDetail{
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 30px;
+        }
+        #placeDetail h4{
+            height: 35px;
+            font-size: 20px;
+        }
+        #placeDetail ul{
+            list-style: inside;
+        }
+        #placeDetail li{
+            height: 25px;
+            color: slategrey;
+        }
+        #bookPlace{
+            width: 85px;
+            height: 32px;
+            background-color: olive;
+            color: white;
+            position: absolute;
+            right: 70px;
+            /* bottom: 300px; */
+        }
