@@ -52,17 +52,4 @@
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	
-	<!-- 시작시에 테스트점 -->
-	<welcome-file-list>
-		<welcome-file>home.html</welcome-file>
-		<welcome-file>home.htm</welcome-file>
-		<welcome-file>home.jsp</welcome-file>
-	</welcome-file-list>
-	
-	
-	
-	
-	
-
 </web-app>
