@@ -8,8 +8,6 @@
 </head>
 <body>
 	<p>welcome</p>
-	zz
-	asd
-	126343123
+	조석근입니다.
 </body>
 </html>
