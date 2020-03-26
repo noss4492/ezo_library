@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	
+
+	
+<bean id="factory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<property name="dataSource" ref="dataSource"></property>	
+	<property name="configLocation" value="/WEB-INF/sqlMapConfig.xml" /><!-- 마이바티스 설정 파일 경로 -->
+	<property name="mapperLocations" value="/WEB-INF/boardMapper.xml" /><!-- Mapper 파일 경로 -->
+</bean>
+
+<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+	<constructor-arg ref="factory"></constructor-arg>
+</bean>
+
+
+<!-- 코드 기반의 트랜잭션 처리는 어케? -->
+<!-- 트랜잭션 매니저를 이용한 트랜잭션 선언적 처리(어노테이션으루다가) -->
+<tx:annotation-driven transaction-manager="transactionManager" />
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+</bean>
+
+<!-- bean들은 모두 싱글톤 -->
+<!-- 몬가 이것을 하기 위해 boardMapper.xml sqlMapConfig.xml을 쓰고 있음. -->
+
+
+</beans>

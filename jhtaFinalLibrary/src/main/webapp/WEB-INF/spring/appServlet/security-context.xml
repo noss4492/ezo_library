@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-5.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 톰캣 DBCP 연결 정보인 dataSource -->
+<!-- <bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource"> -->
+<!-- 커넥션풀 부하가 너무 심해서 일단 단일 연결로 바꿈 -->
+<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+	<property name="url" value="jdbc:oracle:thin:@orcl.ckyvzseloumz.ap-northeast-2.rds.amazonaws.com
+	:1521:orcl" />
+	<property name="username" value="admin" />
+	<property name="password" value="tigertiger" />
+</bean>
+
+<security:http auto-config="true" use-expressions="true">
+	<security:intercept-url pattern="/board/*" access="isAuthenticated()"/>
+	<security:intercept-url pattern="/admin/*" access="hasRole('ROLE_ADMIN')"/>
+	<security:intercept-url pattern="/public/**" access="permitAll"/>
+	<security:intercept-url pattern="/member/**" access="hasRole('ROLE_USER')"/>
+	<!-- <security:csrf disabled="true"/> -->
+	<security:form-login login-page="/common/cLogin"/>
+	<security:logout delete-cookies="JSESSIONID" invalidate-session="true" 
+	logout-url="/common/customLogout" logout-success-url="/"/>
+</security:http>
+<!-- 빈 껍데기 패스워드 인코더였음;; 진짜 암호화하러 가자 -->
+
+<bean id="passwordEncoder" class="kr.co.jhta.board.security.CustomPasswordEncoder"></bean>
+<bean id="bCryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
+
+
+
+<security:authentication-manager>
+	<security:authentication-provider>
+		<security:jdbc-user-service data-source-ref="dataSource" 
+			users-by-username-query=
+			"SELECT id username, pwd password, enabled 
+			 FROM member
+			 WHERE id = ? "
+			 authorities-by-username-query=
+			 "SELECT username, authority 
+			  FROM authorities 
+			  WHERE username = ? "
+			/>
+		<!-- <security:password-encoder ref="passwordEncoder"/> -->
+		<security:password-encoder ref="bCryptPasswordEncoder"/>
+<!-- db에 연결하면 어떻게 바뀔지.. 예전것 주석
+			<security:user-service>
+			<security:user name="user" password="{noop}123" authorities="ROLE_USER"/>
+			<security:user name="admin" password="123" authorities="ROLE_ADMIN,ROLE_USER"/>			
+		</security:user-service> 
+-->
+	</security:authentication-provider>
+</security:authentication-manager>
+
+</beans>
