@@ -8,8 +8,6 @@
 </head>
 <body>
 	<p>welcome</p>
-	zz
-	asd
-	126343123
+	서버시간 : {serverTime}
 </body>
 </html>
