@@ -99,7 +99,7 @@
                                 <li class="navBarLiSub"><a href="">열린소리함</a></li>
                                 <li class="navBarLiSub"><a href="">자주하는질문</a></li>
                                 <li class="navBarLiSub"><a href="">기증도서알림</a></li>
-                                <li class="navBarLiSub"><a href="">설문조사</a></li>
+                                <li class="navBarLiSub"><a href="">설문조사 </a></li>
                             </ul>
 
                         </li>
